@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>猫モンタージュ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>猫モンタージュ</h1>
+
+  <div>
+    <label>顔:
+      <select id="faceSelect" onchange="updateCat()">
+        <option value="face1">ねこ1</option>
+        <option value="face2">ねこ2</option>
+        <option value="face3">ねこ3</option>
+      </select>
+    </label>
+    <label>目:
+      <select id="eyesSelect" onchange="updateCat()">
+        <option value="eyes1">ねこ1</option>
+        <option value="eyes2">ねこ2</option>
+        <option value="eyes3">ねこ3</option>
+      </select>
+    </label>
+    <label>口:
+      <select id="mouthSelect" onchange="updateCat()">
+        <option value="mouth1">ねこ1</option>
+        <option value="mouth2">ねこ2</option>
+        <option value="mouth3">ねこ3</option>
+      </select>
+    </label>
+  </div>
+
+  <canvas id="catCanvas" width="300" height="300"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
