@@ -7,7 +7,7 @@ fetch('face_list.json')
       if (face.startsWith('face')) { // "face" で始まるものだけ追加
         const option = document.createElement('option');
         option.value = face;
-        option.textContent = `ねこ${index + 1}（${face}）`;
+        option.textContent = face;
         faceSelect.appendChild(option);
       }
     });
