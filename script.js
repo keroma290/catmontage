@@ -7,7 +7,7 @@ fetch('face_list.json')
       if (face.startsWith('face')) { // "face" で始まるものだけ追加
         const option = document.createElement('option');
         option.value = face;
-        option.textContent = face;
+       option.textContent = face.replace('.png', '');
         faceSelect.appendChild(option);
       }
     });
