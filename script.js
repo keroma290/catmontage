@@ -1,3 +1,20 @@
+// face_list.json を読み込んで顔の選択肢を追加する
+fetch('face_list.json')
+  .then(response => response.json())
+  .then(faceList => {
+    const faceSelect = document.getElementById('faceSelect');
+    faceList.forEach((face, index) => {
+      if (face.startsWith('face')) { // "face" で始まるものだけ追加
+        const option = document.createElement('option');
+        option.value = face;
+        option.textContent = `ねこ${index + 1}（${face}）`;
+        faceSelect.appendChild(option);
+      }
+    });
+  })
+  .catch(error => {
+    console.error('顔リストの読み込みに失敗しました:', error);
+  });
 function updateCat() {
   const canvas = document.getElementById('catCanvas');
   const ctx = canvas.getContext('2d');
